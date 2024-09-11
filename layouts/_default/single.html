@@ -1,0 +1,16 @@
+{{ define "main" }}
+<section class="container mx-auto px-4 py-12">
+  <article class="prose lg:prose-xl">
+    <header>
+      <h1 class="text-4xl font-bold text-gray-800 mb-4">{{ .Title }}</h1>
+      <div class="flex justify-between text-sm text-gray-500 mb-2">
+        <p>{{ .Date.Format "January 2, 2006" }}</p>
+        <p>{{ .ReadingTime }} minutes ({{ .WordCount }} words)</p>
+      </div>
+      <hr class="border-gray-300 mb-2" />
+    </header>
+
+    <div class="content">{{ .Content }}</div>
+  </article>
+</section>
+{{ end }}
