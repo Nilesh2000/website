@@ -14,6 +14,9 @@
     />
 
     <script src="https://cdn.tailwindcss.com"></script>
+
+    {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
   </head>
   <body>
     {{ block "main" . }}
