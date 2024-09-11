@@ -1,6 +1,10 @@
 {{ define "main" }}
-<section class="container mx-auto px-4 py-12">
-    <h1 class="text-4xl font-bold text-gray-800 mb-8">Posts</h1>
+<div class="container mx-auto px-4 py-8">
+    <section class="mb-8">
+        <h1 class="text-4xl font-bold text-gray-800 mb-8">Posts</h1>
+        <!-- Tags Button -->
+        <a href="/tags" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">View All Tags</a>
+    </section>
 
     {{ $currentYear := "" }}
     {{ range .Pages }}
@@ -24,5 +28,5 @@
     {{ end }}
 
     </div>
-</section>
+</div>
 {{ end }}
