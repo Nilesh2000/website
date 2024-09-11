@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="max-w-4xl mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-8">All Tags</h1>
+  <ul class="flex flex-wrap gap-4">
+    {{ range .Data.Terms.Alphabetical }}
+    <li>
+      <a
+        href="{{ .Page.Permalink }}"
+        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 hover:bg-blue-500 hover:text-white transition duration-300"
+      >
+        {{ .Page.Title }} ({{ .Count }})
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
