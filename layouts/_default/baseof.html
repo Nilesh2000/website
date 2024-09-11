@@ -19,9 +19,8 @@
     <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
   </head>
   <body>
-    {{ block "main" . }}
-    <!-- The part of the page that begins to differ between templates -->
-    {{ end }}
+    <!-- Main Content -->
+    <main>{{ block "main" . }}{{ end }}</main>
   </body>
   <script
     defer
