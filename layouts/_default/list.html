@@ -1,0 +1,28 @@
+{{ define "main" }}
+<section class="container mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-gray-800 mb-8">Posts</h1>
+
+    {{ $currentYear := "" }}
+    {{ range .Pages }}
+        {{ $year := .Date.Format "2006" }}
+
+        {{ if ne $year $currentYear }}
+            {{ if ne $currentYear "" }}
+                </div>
+            {{ end }}
+
+            <h2 class="text-3xl font-bold text-gray-700 mt-8 mb-4">{{ $year }}</h2>
+            <div class="space-y-2"> <!-- Reduced spacing here -->
+            {{ $currentYear = $year }}
+        {{ end }}
+
+        <div class="flex items-center mb-2 border-b border-gray-300 pb-2"> <!-- Reduced spacing here -->
+            <a href="{{ .Permalink }}" class="text-blue-600 hover:underline flex-1">{{ .Title }}</a>
+            <p class="text-sm text-gray-500 ml-4 whitespace-nowrap">{{ .Date.Format "January 2" }}</p>
+        </div>
+
+    {{ end }}
+
+    </div>
+</section>
+{{ end }}
