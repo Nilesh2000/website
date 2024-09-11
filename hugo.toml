@@ -1,3 +1,7 @@
 baseURL = "https://neel2k.xyz/"
 languageCode = "en-us"
 title = "My Personal Website and Blog"
+
+[params]
+name = "Nilesh D"
+tagline = "Writing code, writing stories. Sometimes doing both."
