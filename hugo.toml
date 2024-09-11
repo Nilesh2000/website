@@ -1,6 +1,6 @@
 baseURL = "https://neel2k.xyz/"
 languageCode = "en-us"
-title = "My Personal Website and Blog"
+title = "Musings on programming, tech and life."
 
 enableRobotsTXT = true
 
