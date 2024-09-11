@@ -4,6 +4,9 @@ title = "Musings on programming, tech and life."
 
 enableRobotsTXT = true
 
+[taxonomies]
+tag = "tags"
+
 [params]
 name = "Nilesh D"
 tagline = "Writing code, writing stories. Sometimes doing both."
