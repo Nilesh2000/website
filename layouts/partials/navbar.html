@@ -1,0 +1,48 @@
+<!-- layouts/partials/navbar.html -->
+<nav class="bg-white">
+  <div class="container mx-auto px-4 py-3 flex justify-end items-center">
+    <!-- Navbar Links -->
+    <div class="hidden md:flex space-x-6">
+      <a href="/" class="text-blue-600 hover:text-blue-400">Home</a>
+      <a href="/posts" class="text-blue-600 hover:text-blue-400">Posts</a>
+      <a href="/" class="text-blue-600 hover:text-blue-400">Résumé</a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-toggle" class="md:hidden flex items-center text-blue-600 hover:text-blue-400">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="menu"
+    class="md:hidden fixed top-0 left-0 w-full bg-white transform -translate-y-full transition-transform duration-300"
+  >
+    <div class="container mx-auto px-4 py-3">
+      <a href="/" class="block py-2 text-blue-600 hover:text-blue-400">Home</a>
+      <a href="/posts" class="block py-2 text-blue-600 hover:text-blue-400">Posts</a>
+      <a href="/" class="block py-2 text-blue-600 hover:text-blue-400">Résumé</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Add the JavaScript for Mobile Menu Toggle -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    menuToggle.addEventListener("click", function () {
+      if (menu.classList.contains("-translate-y-full")) {
+        menu.classList.remove("-translate-y-full");
+        menu.classList.add("translate-y-0");
+      } else {
+        menu.classList.add("-translate-y-full");
+        menu.classList.remove("translate-y-0");
+      }
+    });
+  });
+</script>
