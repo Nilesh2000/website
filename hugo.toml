@@ -10,3 +10,7 @@ tag = "tags"
 [params]
 name = "Nilesh D"
 tagline = "Writing code, writing stories. Sometimes doing both."
+
+[markup]
+[markup.highlight]
+style = "onedark"
